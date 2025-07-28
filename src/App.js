@@ -1,18 +1,19 @@
 import './App.css';
-import { Counter, FilterList, Hello, TodoList, Users } from './jour/Un';
+import { AutoCounter, FocusInput, LoginForm, ToggleText, WelcomeBox } from './jour/Deux';
 
 function App() {
   return (
     <>
-      <Hello name="Ibrahim" />
+      <LoginForm />
       <hr />
-      <Counter />
+      <WelcomeBox isLoggedIn={true} />
       <hr />
-      <TodoList />
+      <ToggleText />
       <hr />
-      <FilterList />
+      <AutoCounter />
       <hr />
-      <Users />
+      <FocusInput />
+      <hr />
     </>
   );
 }
