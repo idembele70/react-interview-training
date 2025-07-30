@@ -1,20 +1,22 @@
 import './App.css';
-import { AlertBox, Button, ButtonEventBubbling, ButtonList, DoubleCounter, ThemeSwitcher } from './jour/trois/Trois';
+import { ColorBox, DefaultProps, Greeting, LikeButton, ShowPassword, UseEffect, UserCard } from './jour/Quatre';
 
 function App() {
   return (
     <>
-      <ButtonEventBubbling />
+      <UseEffect />
       <hr />
-      <Button label='Click Me!' onClick={() => console.log('Clicked')} />
+      <DefaultProps />
       <hr />
-      <DoubleCounter />
-      <hr/>
-      <AlertBox>Attention : action irréversible</AlertBox>
+      <UserCard name='Ibrahim' age={24} job='Développeur' />
       <hr />
-      <ButtonList />
+      <LikeButton />
       <hr />
-      <ThemeSwitcher />
+      <ShowPassword />
+      <hr />
+      <ColorBox color='red' />
+      <hr />
+      <Greeting />
     </>
   );
 }
