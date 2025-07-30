@@ -1,19 +1,20 @@
 import './App.css';
-import { AutoCounter, FocusInput, LoginForm, ToggleText, WelcomeBox } from './jour/Deux';
+import { AlertBox, Button, ButtonEventBubbling, ButtonList, DoubleCounter, ThemeSwitcher } from './jour/trois/Trois';
 
 function App() {
   return (
     <>
-      <LoginForm />
+      <ButtonEventBubbling />
       <hr />
-      <WelcomeBox isLoggedIn={true} />
+      <Button label='Click Me!' onClick={() => console.log('Clicked')} />
       <hr />
-      <ToggleText />
+      <DoubleCounter />
+      <hr/>
+      <AlertBox>Attention : action irréversible</AlertBox>
       <hr />
-      <AutoCounter />
+      <ButtonList />
       <hr />
-      <FocusInput />
-      <hr />
+      <ThemeSwitcher />
     </>
   );
 }
