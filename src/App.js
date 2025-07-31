@@ -1,22 +1,20 @@
 import './App.css';
-import { ColorBox, DefaultProps, Greeting, LikeButton, ShowPassword, UseEffect, UserCard } from './jour/Quatre';
+import { DebouncedSearch, ExpensiveCalc, InputFocusTracker, InputFocusTrackerV2, Timer, TodoList } from './jour/Cinq';
 
 function App() {
   return (
     <>
-      <UseEffect />
+      <Timer />
       <hr />
-      <DefaultProps />
+      <TodoList />
       <hr />
-      <UserCard name='Ibrahim' age={24} job='Développeur' />
+      <InputFocusTracker />
       <hr />
-      <LikeButton />
+      <ExpensiveCalc />
       <hr />
-      <ShowPassword />
+      <DebouncedSearch />
       <hr />
-      <ColorBox color='red' />
-      <hr />
-      <Greeting />
+      <InputFocusTrackerV2 />
     </>
   );
 }
