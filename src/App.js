@@ -1,20 +1,18 @@
 import './App.css';
-import { DebouncedSearch, ExpensiveCalc, InputFocusTracker, InputFocusTrackerV2, Timer, TodoList } from './jour/Cinq';
+import { AutoResetCounter, FocusInput, NameForm, ProgressBar, SimpleTodoList } from './jour/six';
 
 function App() {
   return (
     <>
-      <Timer />
+      <AutoResetCounter />
       <hr />
-      <TodoList />
+      <NameForm />
       <hr />
-      <InputFocusTracker />
+      <SimpleTodoList />
       <hr />
-      <ExpensiveCalc />
+      <ProgressBar />
       <hr />
-      <DebouncedSearch />
-      <hr />
-      <InputFocusTrackerV2 />
+      <FocusInput />
     </>
   );
 }
