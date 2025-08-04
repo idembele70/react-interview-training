@@ -1,18 +1,18 @@
 import './App.css';
-import { AutoResetCounter, FocusInput, NameForm, ProgressBar, SimpleTodoList } from './jour/six';
+import { RandomQuote, TimerButton,CharacterCounter, Tabs, PersistentForm } from './jour/sept';
 
 function App() {
   return (
     <>
-      <AutoResetCounter />
+      <RandomQuote />
       <hr />
-      <NameForm />
+      <TimerButton />
       <hr />
-      <SimpleTodoList />
+      <CharacterCounter />
       <hr />
-      <ProgressBar />
+      <Tabs />
       <hr />
-      <FocusInput />
+      <PersistentForm />
     </>
   );
 }
