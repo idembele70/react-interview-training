@@ -1,18 +1,19 @@
 import './App.css';
-import { RandomQuote, TimerButton,CharacterCounter, Tabs, PersistentForm } from './jour/sept';
+import { DynamicList, FormValidator, Horloge, ScrollToTopButton, ToggleSwitch } from './jour/eight';
 
 function App() {
   return (
     <>
-      <RandomQuote />
+      <ToggleSwitch />
       <hr />
-      <TimerButton />
+      <ScrollToTopButton />
       <hr />
-      <CharacterCounter />
+      <FormValidator />
       <hr />
-      <Tabs />
+      {/* <Horloge /> */}
       <hr />
-      <PersistentForm />
+      <DynamicList />
+      <hr />
     </>
   );
 }
