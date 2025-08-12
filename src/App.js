@@ -1,19 +1,18 @@
 import './App.css';
-import { DynamicList, FormValidator, Horloge, ScrollToTopButton, ToggleSwitch } from './jour/eight';
+import { LimitedCounter, RemovableList, ThemeSwitcher, AutoResetCounter, LiveSearch } from './jour/nine.jsx'
 
 function App() {
   return (
     <>
-      <ToggleSwitch />
+      <LimitedCounter />
       <hr />
-      <ScrollToTopButton />
+      <RemovableList />
       <hr />
-      <FormValidator />
+      <ThemeSwitcher />
+      <hr/>
+      <AutoResetCounter />
       <hr />
-      {/* <Horloge /> */}
-      <hr />
-      <DynamicList />
-      <hr />
+      < LiveSearch />
     </>
   );
 }
