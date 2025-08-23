@@ -1,18 +1,18 @@
 import './App.css';
-import { LimitedCounter, RemovableList, ThemeSwitcher, AutoResetCounter, LiveSearch } from './jour/nine.jsx'
+import { Counter, SortableList, LiveSearch, ThemeSwitcher, Accordion } from './jour/ten.jsx';
 
 function App() {
   return (
     <>
-      <LimitedCounter />
+      <Counter />
       <hr />
-      <RemovableList />
+      <SortableList />
+      <hr />
+      <LiveSearch />
       <hr />
       <ThemeSwitcher />
-      <hr/>
-      <AutoResetCounter />
       <hr />
-      < LiveSearch />
+      <Accordion />
     </>
   );
 }
