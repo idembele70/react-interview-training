@@ -43,7 +43,7 @@ function TodoList() {
     if (!title.trim()) return;
     const todo = {
         id: `${Math.random().toString().slice(2,8)}${Date.now().toString().slice(1,4)}`,
-        title: todoTitle,
+        title: title,
         status: false,
       }
       dispatch({ type: 'ADD_TODO', todo })
@@ -61,7 +61,7 @@ function TodoList() {
   return (
     <div>
       <form onSubmit={saveTodo}>
-        <input type="text" autoComplete="off" name="todo-title" value={todoTitle} onChange={(e)=> setTitle(e.target.value)} />
+        <input type="text" autoComplete="off" name="todo-title" value={title} onChange={(e)=> setTitle(e.target.value)} />
         <input disabled={!title} type="submit"/>
       </form>
       <ul>
