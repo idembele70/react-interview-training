@@ -1,27 +1,26 @@
 import './App.css';
-import { lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Counter from './level/mid/day-02/Counter';
-import User from './level/mid/day-02/UserDetail';
-import FormArray from './level/mid/day-02/FormArray';
-import Theme from './level/mid/day-02/Theme';
+import { lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import BigListSearch from './level/mid/day-03/BigListSearch';
+import { Loading } from './level/mid/day-03/LazyPosts';
+import DynamicForm from './level/mid/day-03/DynamicForm';
+import SettingsPanel from './level/mid/day-03/SettingsPanel';
+import Products from './level/mid/day-03/Products';
 
-const Users = lazy(() => import('./level/mid/day-02/UserList'));
-
+const LazyPosts = lazy(() => import('./level/mid/day-03/LazyPosts'));
 
 function App() {
 
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path='/users' element={<Users />} />
-        <Route path='/users/:id' element={<User />} />
-        <Route path='/home' element={<h1>Home page</h1>} />
-        <Route path='counter' element={<Counter />} />
-        <Route path='forms' element={<FormArray />} />
-        <Route path='theme' element={<Theme />} />
+        <Route path='search' element={<BigListSearch />} />
+        <Route path='posts' element={<Suspense fallback={<Loading />}><LazyPosts /></Suspense>} />
+        <Route path='forms' element={<DynamicForm />} />
+        <Route path='setting' element={<SettingsPanel />} />
+        <Route path='products' element={<Products />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   )
 }
 
